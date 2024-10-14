@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+  <title></title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='') }}">
+  <script async src=""></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0, width=device-width, height=device-height"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+ <!-- Google-specific meta tags -->
+  <meta name="google" content="notranslate"> <!-- Prevent translation of the page content -->
+  <meta name="googlebot" content="index, follow"> <!-- Instruct Googlebot to index and follow links -->
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ request.url }}">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ request.url }}">
+  <meta property="og:image" content="">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta property="og:image" content="">
+  <meta property="twitter:image:src" content="">
+
+  <!-- Structured Data Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "",
+    "logo": "",
+    "url": "{{ request.url }}",
+    "sameAs": [
+      "https://",
+      "https://"
+    ]
+  }
+  </script>
+
+  <!-- Language and Locale Tags -->
+  <meta name="language" content="en">
+  <meta name="country" content="GB">
+
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+
+{% endblock %}
+</body>
+</html>
