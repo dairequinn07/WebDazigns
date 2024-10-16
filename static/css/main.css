@@ -1,6 +1,6 @@
 :root {
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --font-size-mobile: 1.3em;
+    --font-size-mobile: 1.2em;
     --font-size-tablet: 2em;
     --font-size-desktop: 3em;
     --font-size-large-desktop: 4em;
