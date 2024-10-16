@@ -1,18 +1,55 @@
+:root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --font-size-mobile: 1.3em;
+    --font-size-tablet: 2em;
+    --font-size-desktop: 3em;
+    --font-size-large-desktop: 4em;
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #A9AB46;
+    --bodyTextColorWhite: #F5E9B8;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi', sans-serif;
+    background-color: black;
+}
+
+.businessName,
+h1,
+h2 {
+    text-align: center;
+    color: #EBEBEB;
+}
+
 .businessName {
     font-family: 'Satoshi', sans-serif;
-    text-align: center;
-    font-size: 4.5rem;
-    color: #EBEBEB;
+    font-size: 4rem;
 }
 
 h1 {
     font-size: 2.5rem;
-    color: #EBEBEB;
 }
 
 h2 {
     font-size: 2rem;
-    color: #EBEBEB;
 }
 
 /*-- -------------------------- -->
@@ -35,30 +72,6 @@ h2 {
   cursor: pointer;
   transform-style: preserve-3d;
   transition: transform 0.5s;
-}
-
-.btn::before {
-  content: "";
-  width: 100%;
-  height: 15px;
-  background-color: var(--color2);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: rotateX(90deg);
-  transform-origin: bottom;
-}
-
-.btn::after {
-  content: "";
-  width: 15px;
-  height: 100%;
-  background-color: var(--color1);
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: rotateY(-90deg);
-  transform-origin: right;
 }
 
 .btn:hover {
@@ -103,6 +116,7 @@ h2 {
 #heading {
   text-align: center;
   margin: 2em;
+  /* change color potentially */
   color: rgb(255, 255, 255);
   font-size: 1.2em;
 }
@@ -155,42 +169,12 @@ h2 {
 
 .button3:hover {
   background-color: green;
-  color: white;
 }
 
 /*-- -------------------------- -->
 <---            Hero            -->
 <--- -------------------------- -*/
 
-:root {
-    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #A9AB46;
-    --bodyTextColorWhite: #F5E9B8;
-    /* 13px - 16px */
-    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    /* 31px - 49px */
-    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    --bodyFontSize: 1rem;
-    /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Satoshi', sans-serif;
-    background-color: black;
-}
-
-*, *:before, *:after {
-    /* prevents padding from affecting height and width */
-    box-sizing: border-box;
-}
 .cs-topper {
     font-size: var(--topperFontSize);
     line-height: 1.2em;
@@ -201,39 +185,6 @@ body {
     color: var(--primary);
     margin-bottom: 0.25rem;
     display: block;
-}
-
-/*.cs-title {
-    font-size: var(--headerFontSize);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    max-width: 43.75rem;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    position: relative;
-}*/
-
-.ml9 {
-  position: relative;
-  font-weight: 200;
-  font-size: 4em;
-  color: #F5E9B8;
-}
-
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em;
 }
 
 .cs-text {
@@ -266,6 +217,27 @@ body {
     position: relative;
     z-index: 1;
   }
+  .ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: var(--font-size-mobile);
+    color: #EBEBEB;
+  }
+
+  .ml9 .text-wrapper {
+   position: relative;
+   display: inline-block;
+   padding-top: 0.2em;
+   padding-right: 0.05em;
+   padding-bottom: 0.1em;
+   overflow: hidden;
+ }
+
+  .ml9 .letter {
+   transform-origin: 50% 100%;
+   display: inline-block;
+   line-height: 1em;
+ }
   #hero-1946 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
@@ -422,7 +394,7 @@ body {
   #hero-1946 .cs-h3 {
     font-size: 1.25rem;
     line-height: 1.5em;
-    text-align: inherit;
+    text-align: center;
     margin: 0;
     margin-bottom: 0.75rem;
     color: #6472C4;
@@ -451,8 +423,11 @@ body {
    #hero-1946 .cs-item2 {
     text-align: left;
     margin: 0;
-    align-items: flex-start;
+    align-items: center;
     grid-column: span 6;
+  }
+  .ml9 {
+    font-size: var(--font-size-tablet);
   }
 }
 /* Small Desktop - 1024px */
@@ -469,6 +444,9 @@ body {
   }
   #hero-1946 .cs-item2 {
     grid-column: span 3;
+  }
+  .ml9 {
+    font-size: var(--font-size-desktop);
   }
 }
 /* Large Desktop 1300px */
@@ -491,5 +469,8 @@ body {
   #hero-1946 .cs-flex {
     width: 50%;
     max-width: 39.375rem;
+  }
+  .ml9 {
+    font-size: var(--font-size-large-desktop);
   }
 }

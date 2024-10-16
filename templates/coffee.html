@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+{% endblock %}
+
+{% block body %}
+
+<h1 class="businessName">Your Coffee Shop<span style="color:#6472C4;">.</span></h1>
+
+<!-- ============================================ -->
+<!--                     Hero                     -->
+<!-- ============================================ -->
+
+<section id="hero-1946">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="ml9">Coffee made with love</h1>
+        </div>
+        <picture class="cs-picture">
+            <source media="(min-width: 601px)" srcset="static/coffee.svg">
+            <source media="(max-width: 600px)" srcset="static/coffee.svg">
+            <img decoding="async" src="static/coffee.svg" alt="construction site" width="1280" height="510">
+        </picture>
+            <h1>Why choose Published?</h1>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="static/lordicon1.webp" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Simple</h3>
+                    <p class="cs-item-text">We do the simple things best! Helping make sure your sites core vital scores are top of the game.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="static/lordicon2.webp" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Slick</h3>
+                    <p class="cs-item-text">Helping you build a slick, modern website by constantly keeping up with the latest trends.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="static/lordicon3.webp" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Speedy</h3>
+                    <p class="cs-item-text">By keeping things simple and efficient, we guarantee your site will be electric!</p>
+                </div>
+            </li>
+        </ul>
+            <h1>Sites we've Published</h1>
+            <h2>Winute: Daily quiz game</h2>
+            <iframe src="https://www.winute.co.uk" width="80%" height="600px" loading="lazy" style="border-color: #6472C4;">
+                Your browser does not support iframes.
+            </iframe>
+            <p><h1>Our sample sites:</h1>
+                <ul class="cs-card-group2">
+            <li class="cs-item">
+                <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="static/lordicon1.webp" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Simple</h3>
+                    <p class="cs-item-text">We do the simple things best! Helping make sure your sites core vital scores are top of the game.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="static/lordicon2.webp" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Slick</h3>
+                    <p class="cs-item-text">Helping you build a slick, modern website by constantly keeping up with the latest trends.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="static/lordicon3.webp" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Speedy</h3>
+                    <p class="cs-item-text">By keeping things simple and efficient, we guarantee your site will be electric!</p>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</section>
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+{% endblock %}
