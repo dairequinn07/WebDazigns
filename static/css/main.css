@@ -41,8 +41,8 @@ h2 {
 }
 
 .businessName {
-    font-family: 'Satoshi', sans-serif;
     font-size: 4rem;
+    font-weight: 600;
 }
 
 h1 {
