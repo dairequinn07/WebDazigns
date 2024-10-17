@@ -150,7 +150,7 @@ h2 {
   margin-top: 2.5em;
 }
 
-.input-field .placeholder {
+.input-field::placeholder {
   color: white;
 }
 
