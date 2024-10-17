@@ -118,7 +118,7 @@ h2 {
   margin: 2em;
   /* change color potentially */
   color: rgb(255, 255, 255);
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .field {
@@ -140,7 +140,7 @@ h2 {
   border: none;
   outline: none;
   width: 100%;
-  color: #d3d3d3;
+  color: white;
 }
 
 .form .button {
@@ -150,7 +150,7 @@ h2 {
   margin-top: 2.5em;
 }
 
-.form .placeholder {
+.field .placeholder {
   color: white;
 }
 
