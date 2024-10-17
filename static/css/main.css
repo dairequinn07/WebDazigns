@@ -141,6 +141,7 @@ h2 {
   outline: none;
   width: 100%;
   color: white;
+  font-family: 'Satoshi', sans-serif;
 }
 
 .form .button {
@@ -151,7 +152,7 @@ h2 {
 }
 
 .input-field::placeholder {
-  color: white;
+  color: #CCCCCC;
 }
 
 .button3 {

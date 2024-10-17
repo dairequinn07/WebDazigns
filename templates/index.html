@@ -109,23 +109,26 @@
 
     </div>
     <div class="overlay" id="formOverlay"> <!-- Overlay for the popup -->
-        <form class="form">
+        <form class="form" method="POST">
             <button type="button" class="close-btn" onclick="closeForm()">✖</button> <!-- Close button -->
             <p id="heading">Enquire</p>
             <div class="field">
-                <input autocomplete="off" placeholder="Name" class="input-field" type="text">
+                <input autocomplete="off" id="name" name="name" placeholder="Name" class="input-field" type="text">
             </div>
             <div class="field">
-                <input autocomplete="off" placeholder="Company name" class="input-field" type="text">
+                <input autocomplete="off" id="company_name" name="company_name" placeholder="Company Name" class="input-field" type="text">
             </div>
             <div class="field">
-                <input autocomplete="off" placeholder="Email address" class="input-field" type="text">
+                <input autocomplete="off" id="email" name="email" placeholder="Email Address" class="input-field" type="email">
             </div>
             <div class="field">
-                <input autocomplete="off" placeholder="Phone number" class="input-field" type="text">
+                <input autocomplete="off" id="phone_number" name="phone_number" placeholder="Phone Number" class="input-field" type="text">
+            </div>
+            <div class="field">
+                <textarea id="comments" name="comments" placeholder="Additional info" class="input-field"></textarea>
             </div>
             <div class="button">
-                <button class="button3" type="button">Send enquiry</button>
+                <button class="button3" type="button" onclick="submitForm()">Send enquiry</button>
             </div>
         </form>
     </div>
@@ -161,6 +164,42 @@ function showForm() {
 function closeForm() {
     var overlay = document.getElementById('formOverlay');
     overlay.style.display = "none"; // Hide the overlay
+}
+
+function submitForm() {
+    // Gather form data
+    const formData = {
+        name: document.getElementById('name').value,
+        company_name: document.getElementById('company_name').value,
+        email: document.getElementById('email').value,
+        phone_number: document.getElementById('phone_number').value,
+        comments: document.getElementById('comments').value,
+    };
+
+    // Send the enquiry form
+    fetch('/submit-form', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)  // Serialize form data as JSON
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            window.alert("Your enquiry has been sent! We'll be in touch soon.");
+            closeForm();  // Optionally close the form after submission
+        }
+    })
+    .catch(error => {
+        console.error('Error submitting enquiry:', error);
+        window.alert('There was an error submitting your enquiry. Please try again later.');
+    });
 }
 </script>
 {% endblock %}
