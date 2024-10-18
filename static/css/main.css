@@ -405,7 +405,7 @@ h2 {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5em;
-    text-align: inherit;
+    text-align: center;
     margin: 0;
     color: #6472C4;
   }
