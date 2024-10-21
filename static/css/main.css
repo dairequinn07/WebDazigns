@@ -364,8 +364,8 @@ h2 {
   #hero-1946 .cs-item:hover {
     border-color: var(--primary);
   }
-  #hero-1946 .cs-item:hover .cs-h3 {
-    color: var(--primary);
+  #hero-1946 .cs-item:hover .cs-h3, #hero-1946 .cs-item2:hover .cs-h3{
+    color: #6472C4;
   }
   #hero-1946 .cs-item:hover .cs-icon {
     transform: rotateY(360deg);
@@ -398,7 +398,7 @@ h2 {
     text-align: center;
     margin: 0;
     margin-bottom: 0.75rem;
-    color: #6472C4;
+    color: black;
     transition: color 0.3s;
   }
   #hero-1946 .cs-item-text {
@@ -407,7 +407,7 @@ h2 {
     line-height: 1.5em;
     text-align: center;
     margin: 0;
-    color: #6472C4;
+    color: black;
   }
 }
 /* Tablet - 768px */
