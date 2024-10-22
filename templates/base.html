@@ -4,11 +4,12 @@
     {% block head %}
   <title>WebDazigns</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon-48x48.png') }}" sizes="48x48">
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
   <script async src=""></script>
 <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -20,12 +21,12 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0, width=device-width, height=device-height"/>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, height=device-height"/>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="">
+  <meta name="description" content="WebDazigns provides custom web development and design services in Belfast, Northern Ireland. We build responsive websites tailored to your business needs.">
+  <meta name="keywords" content="web development Belfast, web design Belfast, custom websites Belfast, WebDazigns, Belfast web developer">
+  <meta name="author" content="WebDazigns">
 
  <!-- Google-specific meta tags -->
   <meta name="google" content="notranslate"> <!-- Prevent translation of the page content -->
@@ -34,34 +35,49 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ request.url }}">
 
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
+  <!-- Open Graph Tags for Social Sharing -->
+  <meta property="og:title" content="WebDazigns | Custom Web Development & Design">
+  <meta property="og:description" content="Providing custom web development services to businesses looking to establish a strong online presence.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ request.url }}">
-  <meta property="og:image" content="">
+  <meta property="og:image" content="{{ url_for('static', filename='webdazigns_logo.svg') }}">
 
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:description" content="">
-  <meta property="og:image" content="">
-  <meta property="twitter:image:src" content="">
+  <meta name="twitter:title" content="WebDazigns | Custom Web Development & Design">
+  <meta name="twitter:description" content="We offer responsive, custom websites tailored to your business needs.">
+  <meta property="twitter:image:src" content="{{ url_for('static', filename='webdazigns_logo.svg') }}">
 
-  <!-- Structured Data Markup -->
+  <!-- Structured Data Markup for SEO -->
   <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
-    "name": "",
-    "logo": "",
-    "url": "{{ request.url }}",
+    "name": "WebDazigns",
+    "url": "https://webdazigns.com",
+    "logo": "https://webdazigns.com/static/webdazigns_logo.svg",
     "sameAs": [
-      "https://",
-      "https://"
-    ]
+      "https://www.facebook.com/WebDazigns",
+      "https://www.twitter.com/WebDazigns",
+    ],
+    "description": "WebDazigns specialises in building custom websites and web applications for businesses of all sizes."
   }
   </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "name": "WebDazigns",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Belfast",
+    "addressCountry": "Northern Ireland"
+  },
+  "url": "https://www.webdazigns.com",
+  "telephone": "+447435657478"
+}
+</script>
 
   <!-- Language and Locale Tags -->
   <meta name="language" content="en">

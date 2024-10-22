@@ -1,22 +1,27 @@
 :root {
-    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+
+    /* Font sizes for responsive design */
     --font-size-mobile: 1.2em;
     --font-size-tablet: 2em;
     --font-size-desktop: 3em;
     --font-size-large-desktop: 4em;
-    --primary: #ff6a3e;
-    --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
-    --headerColor: #1a1a1a;
-    --bodyTextColor: #A9AB46;
-    --bodyTextColorWhite: #F5E9B8;
-    /* 13px - 16px */
+
+    /* Global colour palette */
+    --textColor: #f2eeeb;
+    --backgroundColor: #090706;
+    --primary: #c8b9ab;
+    --secondary: #456a4b;
+    --accent: #71a396;
+
+    /* Additional colors */
+    --headerColor: var(--primary); /* Updated to use primary color */
+    --bodyTextColor: var(--textColor);
+    --bodyTextColorWhite: var(--textColor); /* Align with light text */
+
+    /* Font size and layout adjustments */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1rem;
-    /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
@@ -29,20 +34,22 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Satoshi', sans-serif;
-    background-color: black;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
 }
 
 .businessName,
 h1,
 h2 {
     text-align: center;
-    color: #EBEBEB;
-    font-weight: 200;
+    font-weight: 600;
+    color: var(--primary);
 }
 
 .businessName {
     font-size: 4rem;
     font-weight: 600;
+    color: var(--textColor);
 }
 
 h1 {
@@ -58,8 +65,8 @@ h2 {
 <--- -------------------------- -*/
 
 .btn {
-  --color1: #1a8516;
-  --color2: #236b19;
+  --color1: var(--primary);
+  --color2: var(--secondary);
   perspective: 1000px;
   padding: 1em 1em;
   background: linear-gradient(var(--color1), var(--color2));
@@ -68,7 +75,7 @@ h2 {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: #fff;
+  color: var(--textColor);
   text-shadow: 0 10px 10px #000;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -76,6 +83,7 @@ h2 {
 }
 
 .btn:hover {
+  background-color: var(--accent); /* Hover color is accent */
   transform: rotateX(30deg) rotateZ(0);
 }
 
@@ -103,7 +111,7 @@ h2 {
   padding-left: 4em;
   padding-right: 4em;
   padding-bottom: 0.4em;
-  background-color: #171717;
+  background-color: var(--secondary);
   border-radius: 25px;
   transition: .4s ease-in-out;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
@@ -111,14 +119,14 @@ h2 {
 
 .form:hover {
   transform: scale(1.05);
-  border: 1px solid black;
+  border: 1px solid var(--primary); /* Form border on hover */
 }
 
 #heading {
   text-align: center;
   margin: 2em;
   /* change color potentially */
-  color: rgb(255, 255, 255);
+  color: var(--textColor);
   font-size: 1.5em;
 }
 
@@ -131,8 +139,8 @@ h2 {
   padding: 0.6em;
   border: none;
   outline: none;
-  color: white;
-  background-color: #171717;
+  color: var(--textColor);
+  background-color: var(--secondary);
   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
 
@@ -141,7 +149,7 @@ h2 {
   border: none;
   outline: none;
   width: 100%;
-  color: white;
+  color: var(--textColor);
   font-family: 'Satoshi', sans-serif;
 }
 
@@ -153,7 +161,7 @@ h2 {
 }
 
 .input-field::placeholder {
-  color: #CCCCCC;
+  color: var(--textColor);
 }
 
 .button3 {
@@ -163,13 +171,13 @@ h2 {
   border: none;
   outline: none;
   transition: .4s ease-in-out;
-  background-color: green;
-  color: white;
+  background-color: var(--accent); /* Button uses accent */
+  color: var(--textColor);
   font-size: 1.2rem;
 }
 
 .button3:hover {
-  background-color: green;
+  background-color: var(--primary);
 }
 
 /*-- -------------------------- -->
@@ -222,7 +230,7 @@ h2 {
     position: relative;
     font-weight: 200;
     font-size: var(--font-size-mobile);
-    color: #EBEBEB;
+    color: var(--textColor);
   }
 
   .ml9 .text-wrapper {
@@ -259,6 +267,7 @@ h2 {
   #hero-1946 .cs-title {
     /* 39px - 61px */
     font-size: clamp(2.438rem, 5vw, 3.813rem);
+    color: var(--accent); /* Accent color for hero title */
   }
   #hero-1946 .cs-text {
     margin-bottom: 1.25rem;
@@ -333,7 +342,7 @@ h2 {
     box-sizing: border-box;
     /* 24px - 32px */
     padding: clamp(1.5rem, 3vw, 2rem);
-    background-color: #EBEBEB;
+    background-color: #c9baac0d;
     border-radius: 1.25rem;
     display: flex;
     flex-direction: column;
@@ -351,7 +360,7 @@ h2 {
     box-sizing: border-box;
     /* 24px - 32px */
     padding: clamp(1.5rem, 3vw, 2rem);
-    background-color: #EBEBEB;
+    background-color: #c9baac0d;
     border-radius: 1.25rem;
     display: flex;
     flex-direction: column;
@@ -362,10 +371,10 @@ h2 {
     transition: border-color 0.3s;
   }
   #hero-1946 .cs-item:hover {
-    border-color: var(--primary);
+    border-color: var(--accent);
   }
   #hero-1946 .cs-item:hover .cs-h3, #hero-1946 .cs-item2:hover .cs-h3{
-    color: #6472C4;
+    color: var(--accent);
   }
   #hero-1946 .cs-item:hover .cs-icon {
     transform: rotateY(360deg);
@@ -398,7 +407,7 @@ h2 {
     text-align: center;
     margin: 0;
     margin-bottom: 0.75rem;
-    color: black;
+    color: var(--primary);
     transition: color 0.3s;
   }
   #hero-1946 .cs-item-text {
@@ -407,7 +416,7 @@ h2 {
     line-height: 1.5em;
     text-align: center;
     margin: 0;
-    color: black;
+    color: var(--textColor);
   }
 }
 /* Tablet - 768px */
