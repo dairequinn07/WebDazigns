@@ -33,9 +33,11 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family: 'Satoshi', sans-serif;
     background-color: var(--backgroundColor);
     color: var(--textColor);
+    overflow-x: hidden;
 }
 
 .businessName,
