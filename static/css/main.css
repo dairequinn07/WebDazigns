@@ -63,6 +63,10 @@ h3 {
     font-size: 1.5rem;
     color: var(--accent);
 }
+h4{
+    font-size: 1.25rem;
+    color: var(--textColor);
+}
 
 /*-- -------------------------- -->
 <---       Enquiry Form         -->
