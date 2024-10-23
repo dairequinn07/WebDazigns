@@ -445,7 +445,6 @@ h4{
    transform-style: preserve-3d;
    transition: transform 0.5s;
   }
-
   .btn:hover {
    background-color: var(--accent); /* Hover color is accent */
    transform: rotateX(30deg) rotateZ(0);
@@ -468,13 +467,13 @@ h4{
   #hero-1947 .cs-content {
     flex-direction: row;
   }
-  }
   .text-container {
     flex: 1;
     text-align: left;
   }
   .image-container {
     flex: 1;
+}
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
