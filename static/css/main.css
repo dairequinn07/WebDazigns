@@ -236,7 +236,7 @@ h4{
     display: flex; /* Center the text vertically */
     flex-direction: column; /* Stack children vertically */
     justify-content: center; /* Center content vertically */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the left */
     flex: none;
     width: 100;
   }
@@ -470,10 +470,11 @@ h4{
   }
   }
   .text-container {
-    flex: none;
+    flex: 1;
+    text-align: left;
   }
   .image-container {
-    flex: none;
+    flex: 1;
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -495,6 +496,7 @@ h4{
   }
   .text-container {
     flex: 1;
+    text-align: left;
   }
   .image-container {
     flex: 1;
@@ -529,6 +531,7 @@ h4{
   }
   .text-container {
     flex: 1;
+    text-align: left;
   }
   .image-container {
     flex: 1;
