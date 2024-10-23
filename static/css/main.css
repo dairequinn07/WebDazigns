@@ -226,21 +226,23 @@ h3 {
     width: 100%; /* Full width of the parent container */
     max-width: 1200px; /* Optional: Set a max width for the container */
     margin: 0 auto; /* Center the container */
+    flex-direction: column;
   }
   .text-container {
-    flex: 1; /* Take up 50% of the width */
     display: flex; /* Center the text vertically */
     flex-direction: column; /* Stack children vertically */
     justify-content: center; /* Center content vertically */
     text-align: left; /* Align text to the left */
+    flex: none;
+    width: 100;
   }
-
   .image-container {
-    flex: 1; /* Take up 50% of the width */
     position: relative; /* Needed for positioning child elements */
     background: url('/static/belfast.jpg') no-repeat center center; /* Set background image */
     background-size: cover; /* Cover the entire div */
     height: 400px;
+    flex: none;
+    width: 100%;
   }
   .ml9 {
     position: relative;
@@ -459,6 +461,15 @@ h3 {
   .ml9 {
     font-size: var(--font-size-tablet);
   }
+  #hero-1947 .cs-content {
+    flex-direction: row;
+  }
+  }
+  .text-container {
+    flex: none;
+  }
+  .image-container {
+    flex: none;
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -475,6 +486,15 @@ h3 {
   .ml9 {
     font-size: var(--font-size-desktop);
   }
+  #hero-1947 .cs-content {
+    flex-direction: row;
+  }
+  .text-container {
+    flex: 1;
+  }
+  .image-container {
+    flex: 1;
+}
 }
 /* Large Desktop 1300px */
 @media only screen and (min-width: 81.25rem) {
@@ -500,4 +520,13 @@ h3 {
   .ml9 {
     font-size: var(--font-size-large-desktop);
   }
+  #hero-1947 .cs-content {
+    flex-direction: row;
+  }
+  .text-container {
+    flex: 1;
+  }
+  .image-container {
+    flex: 1;
+}
 }
