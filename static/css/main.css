@@ -60,7 +60,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--accent);
 }
 
@@ -203,6 +203,45 @@ h3 {
     position: relative;
     z-index: 1;
   }
+  #hero-1947 {
+    padding: var(--sectionPadding);
+    /* 160px - 200px */
+    padding-top: 0px; /*clamp(10rem, 20vw, 12.5rem);*/
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-1947 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-1947 .cs-content {
+    display: flex; /* Use Flexbox to align children side by side */
+    width: 100%; /* Full width of the parent container */
+    max-width: 1200px; /* Optional: Set a max width for the container */
+    margin: 0 auto; /* Center the container */
+  }
+  .text-container {
+    flex: 1; /* Take up 50% of the width */
+    display: flex; /* Center the text vertically */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: left; /* Align text to the left */
+  }
+
+  .image-container {
+    flex: 1; /* Take up 50% of the width */
+    position: relative; /* Needed for positioning child elements */
+    background: url('/static/belfast.jpg') no-repeat center center; /* Set background image */
+    background-size: cover; /* Cover the entire div */
+    height: 400px;
+  }
   .ml9 {
     position: relative;
     font-weight: 200;
@@ -294,6 +333,7 @@ h3 {
     width: 100%;
     margin: 0;
     padding: 0;
+    margin-bottom: clamp(2.5rem, 5vw, 3.25rem);
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(9, 1fr);
