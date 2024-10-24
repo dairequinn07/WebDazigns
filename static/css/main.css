@@ -473,7 +473,10 @@ h4{
   }
   .image-container {
     flex: 1;
-}
+  }
+  .lastHeading{
+    text-align: left;
+  }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -499,7 +502,10 @@ h4{
   }
   .image-container {
     flex: 1;
-}
+  }
+  .lastHeading{
+    text-align: left;
+  }
 }
 /* Large Desktop 1300px */
 @media only screen and (min-width: 81.25rem) {
@@ -534,5 +540,8 @@ h4{
   }
   .image-container {
     flex: 1;
-}
+  }
+  .lastHeading{
+    text-align: left;
+  }
 }
