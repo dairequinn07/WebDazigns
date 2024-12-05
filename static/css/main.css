@@ -458,7 +458,6 @@ h4{
   list-style: none;
   height: 120px;
   width: 100%;
-  padding-top: 40px;
   font-family: "Poppins", sans-serif;
   justify-content: center;
 }
@@ -635,7 +634,8 @@ h4{
     max-width: 39.375rem;
   }
   .ml9 {
-    font-size: var(--font-size-large-desktop);
+    font-size: var(--font-size-desktop);
+    margin: 0;
   }
   #hero-1947 .cs-content {
     flex-direction: row;
